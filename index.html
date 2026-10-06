@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Aprobación EPN</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Calculadora de Aprobación EPN</h1>
+
+    <label for="bimestre1">Bimestre 1</label>
+    <div class="campo">
+      <input id="bimestre1" type="number" min="0" max="20" step="0.01" inputmode="decimal" placeholder="0.00" />
+      <span>/ 20</span>
+    </div>
+    <p class="error" id="errB1"></p>
+
+    <label for="bimestre2">Bimestre 2</label>
+    <div class="campo">
+      <input id="bimestre2" type="number" min="0" max="20" step="0.01" inputmode="decimal" placeholder="0.00" />
+      <span>/ 20</span>
+    </div>
+    <p class="error" id="errB2"></p>
+
+    <button id="btnCalcular">Calcular</button>
+
+    <section id="resultado" aria-live="polite"></section>
+
+    <section id="seccionSupletorio" hidden>
+      <h2>Examen Supletorio</h2>
+      <label for="supletorio">Nota del supletorio</label>
+      <div class="campo">
+        <input id="supletorio" type="number" min="0" max="40" step="0.01" inputmode="decimal" placeholder="0.00" />
+        <span>/ 40</span>
+      </div>
+      <p class="error" id="errSupletorio"></p>
+      <button id="btnSupletorio">Calcular nota final</button>
+      <section id="resultadoSupletorio" aria-live="polite"></section>
+    </section>
+  </main>
+  <script type="module" src="dist/main.js"></script>
+</body>
+</html>
